@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    
+    <title>VB6-文件打印小工具 | Hexo</title>
+    
+    
+        <meta name="keywords" content="VB6-文件打印小工具">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="VB6-文件打印小工具。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VB6-文件打印小工具">
+<meta property="og:url" content="http://yoursite.com/wiki/vb/2019-07-17-VB6-文件打印小工具/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="VB6-文件打印小工具。">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/pasted-0.png">
+<meta property="og:updated_time" content="2019-09-23T08:25:36.388Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VB6-文件打印小工具">
+<meta name="twitter:description" content="VB6-文件打印小工具。">
+<meta name="twitter:image" content="http://yoursite.com/images/pasted-0.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    
+
+    
+        <link rel="icon" href="/favicon.ico">
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/libs/jquery/plugins/cookie/1.4.1/jquery.cookie.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+</head>
+</html>
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">Hexo</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/">首页</a>
+                
+                    <a class="main-nav-link" href="/archives">归档</a>
+                
+                    <a class="main-nav-link" href="/categories">分类</a>
+                
+                    <a class="main-nav-link" href="/tags">标签</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/">首页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
+                
+                    <td><a class="main-nav-link" href="/categories">分类</a></td>
+                
+                    <td><a class="main-nav-link" href="/tags">标签</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap" id="categories">
+        <h3 class="widget-title">
+            <span>categories</span>
+            &nbsp;
+            <a id="allExpand" href="#">
+                <i class="fa fa-angle-double-down fa-2x"></i>
+            </a>
+        </h3>
+        
+        
+        
+         <ul class="unstyled" id="tree"> 
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            blog
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/blog/2014-04-29-商君/">商君</a></li>  <li class="file"><a href="/wiki/blog/2014-05-04-立/">立</a></li>  <li class="file"><a href="/wiki/blog/2014-05-22-命途自往/">命途自闯</a></li>  <li class="file"><a href="/wiki/blog/2014-05-22-犹念过往昔岁月/">犹念过往昔岁月</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder"></i>
+                            &nbsp;
+                            hexo
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file"><a href="/wiki/hexo/index/">建站日志</a></li>  </ul> 
+                    </li> 
+                    
+                    <li class="directory open">
+                        <a href="#" data-role="directory">
+                            <i class="fa fa-folder-open"></i>
+                            &nbsp;
+                            vb
+                        </a>
+                         <ul class="unstyled" id="tree">  <li class="file active"><a href="/wiki/vb/2019-07-17-VB6-文件打印小工具/">VB6-文件打印小工具</a></li>  </ul> 
+                    </li> 
+                     <li class="file"><a href="/wiki/index/">Hello World</a></li>  </ul> 
+    </div>
+    <script>
+        $(document).ready(function() {
+            var iconFolderOpenClass  = 'fa-folder-open';
+            var iconFolderCloseClass = 'fa-folder';
+            var iconAllExpandClass = 'fa-angle-double-down';
+            var iconAllPackClass = 'fa-angle-double-up';
+            // Handle directory-tree expansion:
+            // 左键单独展开目录
+            $(document).on('click', '#categories a[data-role="directory"]', function (event) {
+                event.preventDefault();
+
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var subtree = $(this).siblings('ul');
+                icon.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if (expanded) {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideUp({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderCloseClass);
+                } else {
+                    if (typeof subtree != 'undefined') {
+                        subtree.slideDown({ duration: 100 });
+                    }
+                    icon.addClass(iconFolderOpenClass);
+                }
+            });
+            // 右键展开下属所有目录
+            $('#categories a[data-role="directory"]').bind("contextmenu", function(event){
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconFolderOpenClass);
+                var listNode = $(this).siblings('ul');
+                var subtrees = $.merge(listNode.find('li ul'), listNode);
+                var icons = $.merge(listNode.find('.fa'), icon);
+                icons.removeClass(iconFolderOpenClass).removeClass(iconFolderCloseClass);
+                if(expanded) {
+                    subtrees.slideUp({ duration: 100 });
+                    icons.addClass(iconFolderCloseClass);
+                } else {
+                    subtrees.slideDown({ duration: 100 });
+                    icons.addClass(iconFolderOpenClass);
+                }
+            })
+            // 展开关闭所有目录按钮
+            $(document).on('click', '#allExpand', function (event) {
+                event.preventDefault();
+                
+                var icon = $(this).children('.fa');
+                var expanded = icon.hasClass(iconAllExpandClass);
+                icon.removeClass(iconAllExpandClass).removeClass(iconAllPackClass);
+                if(expanded) {
+                    $('#sidebar .fa.fa-folder').removeClass('fa-folder').addClass('fa-folder-open')
+                    $('#categories li ul').slideDown({ duration: 100 });
+                    icon.addClass(iconAllPackClass);
+                } else {
+                    $('#sidebar .fa.fa-folder-open').removeClass('fa-folder-open').addClass('fa-folder')
+                    $('#categories li ul').slideUp({ duration: 100 });
+                    icon.addClass(iconAllExpandClass);
+                }
+            });  
+        });
+    </script>
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+            <section id="main"><article id="post-vb/2019-07-17-VB6-文件打印小工具" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+                    <div class="article-meta">
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/vb/">vb</a>
+    </div>
+
+                        
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/wiki/vb/2019-07-17-VB6-文件打印小工具/">
+            <time datetime="2019-09-19T00:30:27.000Z" itemprop="datePublished">2019-09-19</time>
+        </a>
+    </div>
+
+
+                        
+                            <i class="fa fa-bar-chart"></i>
+                            <span id="busuanzi_container_site_pv"><span id="busuanzi_value_page_pv"></span></span>    
+                        
+                        
+                            <div class="article-meta-button">
+                                <a href="https://github.com/zthxxx/Wiki-site/raw/writing/source/_posts/vb/2019-07-17-VB6-文件打印小工具.md" rel="external nofollow noopener noreferrer" target="_blank"> Source </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/zthxxx/Wiki-site/edit/writing/source/_posts/vb/2019-07-17-VB6-文件打印小工具.md" rel="external nofollow noopener noreferrer" target="_blank"> Edit </a>
+                            </div>
+                            <div class="article-meta-button">
+                                <a href="https://github.com/zthxxx/Wiki-site/commits/writing/source/_posts/vb/2019-07-17-VB6-文件打印小工具.md" rel="external nofollow noopener noreferrer" target="_blank"> History </a>
+                            </div>
+                        
+                    </div>
+                
+                
+    
+        <h1 class="article-title" itemprop="name">
+            VB6-文件打印小工具
+        </h1>
+    
+
+            </header>
+        
+        
+<div class="article-gallery">
+    
+    <a class="gallery-item" href="/images/pasted-0.png" rel="gallery_ck0x8tnfp0009fgi44bi686wl">
+        <img src="/images/pasted-0.png" itemprop="image">
+    </a>
+    
+</div>
+
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p><strong>Notes：</strong><br>虽然说VB是一个古老的语言，有的人觉得早都应该淘汰了，但是个人觉得偶尔用来做一些便于工作的小工具还是很方便的，毕竟只需要一些大学计算机通用的二级基础知识就可以。  </p>
+<h2 id="小工具的小目标"><a href="#小工具的小目标" class="headerlink" title="小工具的小目标"></a>小工具的小目标</h2><p>为了便于制作好的模板生成打印文件稿纸和一些信息的审查表。  </p>
+<h2 id="窗体结构"><a href="#窗体结构" class="headerlink" title="窗体结构"></a>窗体结构</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">├──文件打印系统V1.<span class="number">0</span></span><br><span class="line">│  ├──Login<span class="selector-class">.frm</span>				<span class="comment">//用于登陆使用</span></span><br><span class="line">│  ├──简报<span class="selector-class">.frm</span>				<span class="comment">//用于填写简报的相关信息</span></span><br><span class="line">│  ├──简报示例<span class="selector-class">.frm</span>			<span class="comment">//用于显示填写示范</span></span><br><span class="line">│  ├──文件<span class="selector-class">.frm</span>				<span class="comment">//用于填写文件稿纸的相关信息</span></span><br><span class="line">│  ├──文件示例<span class="selector-class">.frm</span>			<span class="comment">//用于显示填写示范</span></span><br><span class="line">│  ├──文件预览<span class="selector-class">.frm</span>			<span class="comment">//用于打印前放入文件稿纸的提示</span></span><br><span class="line">│  ├──about<span class="selector-class">.frm</span>				<span class="comment">//软件关于信息</span></span><br><span class="line">│  ├──信息<span class="selector-class">.frm</span>				<span class="comment">//关于文件号的提示信息</span></span><br><span class="line">│  ├──资源管理器的相关文档</span><br><span class="line">│     ├── <span class="number">102</span>				<span class="comment">//文件稿纸的模板excel文件</span></span><br><span class="line">└     └── <span class="number">103</span>				<span class="comment">//简报的模板excel文件</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Login-frm"><a href="#Login-frm" class="headerlink" title="Login.frm"></a>Login.frm</h2><p><img src="/images/pasted-0.png" alt="upload successful"></p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># file: 代码</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Option</span> <span class="keyword">Explicit</span></span><br><span class="line"><span class="keyword">Public</span> LoginSucceeded <span class="keyword">As</span> <span class="built_in">Boolean</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Command1_Click()</span><br><span class="line">  <span class="comment">'检查正确的密码</span></span><br><span class="line">    <span class="keyword">If</span> txtPassword = <span class="string">"1"</span> <span class="keyword">Then</span></span><br><span class="line">        <span class="comment">'将代码放在这里传递</span></span><br><span class="line">        <span class="comment">'成功到 calling 函数</span></span><br><span class="line">        <span class="comment">'设置全局变量时最容易的</span></span><br><span class="line">        LoginSucceeded = <span class="literal">True</span></span><br><span class="line">        Unload <span class="keyword">Me</span></span><br><span class="line">        简报.Show</span><br><span class="line">    <span class="keyword">Else</span></span><br><span class="line">        MsgBox <span class="string">"无效的授权码，请重试!"</span>, , <span class="string">"授权失败"</span></span><br><span class="line">        txtPassword.SetFocus</span><br><span class="line"></span><br><span class="line">    <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Command4_Click()</span><br><span class="line">  <span class="comment">'检查正确的密码</span></span><br><span class="line">    <span class="keyword">If</span> txtPassword = <span class="string">"1"</span> <span class="keyword">Then</span></span><br><span class="line">        <span class="comment">'将代码放在这里传递</span></span><br><span class="line">        <span class="comment">'成功到 calling 函数</span></span><br><span class="line">        <span class="comment">'设置全局变量时最容易的</span></span><br><span class="line">        LoginSucceeded = <span class="literal">True</span></span><br><span class="line">        Unload <span class="keyword">Me</span></span><br><span class="line">        文件.Show</span><br><span class="line">    <span class="keyword">Else</span></span><br><span class="line">        MsgBox <span class="string">"无效的授权码，请重试!"</span>, , <span class="string">"授权失败"</span></span><br><span class="line">        txtPassword.SetFocus</span><br><span class="line"></span><br><span class="line">    <span class="keyword">End</span> <span class="keyword">If</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Command5_Click()</span><br><span class="line">    <span class="comment">'设置全局变量为 false</span></span><br><span class="line">    <span class="comment">'不提示失败的登录</span></span><br><span class="line">    LoginSucceeded = <span class="literal">False</span></span><br><span class="line">    <span class="keyword">Me</span>.Hide</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="简报-frm"><a href="#简报-frm" class="headerlink" title="简报.frm"></a>简报.frm</h2><p><img src="%5Cimages%5Cpasted-1.png" alt="upload successful"></p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># file: 代码</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Dim</span> xlApp <span class="keyword">As</span> Excel.Application	<span class="comment">'声明excel对象</span></span><br><span class="line"><span class="keyword">Dim</span> xlBook <span class="keyword">As</span> Excel.Workbook	<span class="comment">'声明book对象</span></span><br><span class="line"><span class="keyword">Dim</span> xlSheet <span class="keyword">As</span> Excel.Worksheet	<span class="comment">'声明sheet对象</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Command1_Click()</span><br><span class="line">	Unload <span class="keyword">Me</span>	’关闭当前窗口</span><br><span class="line">	Login.Show	<span class="comment">'打开Login窗口</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Command2_Click()</span><br><span class="line">	<span class="keyword">Set</span> xlApp = CreateObject(<span class="string">"excel.application"</span>)	<span class="comment">'设置打开excel</span></span><br><span class="line">	xlApp.Visible = <span class="literal">False</span>	<span class="comment">'设置excel不可见</span></span><br><span class="line">    <span class="keyword">Set</span> xlBook = xlApp.Workbooks.Open(App.Path &amp; <span class="string">"\简报.xls"</span>)	<span class="comment">'程序目录下的简报.xls文件</span></span><br><span class="line">    <span class="keyword">With</span> xlApp.ActiveSheet	<span class="comment">'开始对简报.xls文件的单元格赋值</span></span><br><span class="line">        .Range(<span class="string">"d2"</span>) = DTPicker2.Value	<span class="comment">'向单元格赋值日期</span></span><br><span class="line">        .Range(<span class="string">"b9"</span>) = DTPicker2.Value	<span class="comment">'向单元格赋值日期</span></span><br><span class="line">        .Range(<span class="string">"b4"</span>) = Text2.<span class="keyword">Text</span>	<span class="comment">'向单元格赋值简报标题</span></span><br><span class="line">        .Range(<span class="string">"b10"</span>) = Text2.<span class="keyword">Text</span>	<span class="comment">'向单元格赋值简报标题</span></span><br><span class="line">    <span class="keyword">End</span> <span class="keyword">With</span>	<span class="comment">'结束赋值</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">'xlApp.ActiveSheet.PrintPreview	'显示打印预览未启用</span></span><br><span class="line">    xlApp.ActiveSheet.PrintOut	<span class="comment">'直接打印简报.xls</span></span><br><span class="line">    xlApp.DisplayAlerts = <span class="literal">False</span>	<span class="comment">'不显示关闭确认页面</span></span><br><span class="line">    xlBook.Close <span class="literal">True</span>	<span class="comment">'关闭excel</span></span><br><span class="line">       <span class="comment">' xlBook.Save	'保存excel未启用</span></span><br><span class="line">    <span class="comment">'xlBook.Close savechanges = False	</span></span><br><span class="line">   </span><br><span class="line">    xlApp.Quit	<span class="comment">'退出excel程序</span></span><br><span class="line">    <span class="comment">'xlApp.DisplayAlerts = False</span></span><br><span class="line">    <span class="keyword">Set</span> xlApp = <span class="literal">Nothing</span>	<span class="comment">'释放excel</span></span><br><span class="line">    <span class="keyword">Set</span> xlBook = <span class="literal">Nothing</span>	<span class="comment">'释放book</span></span><br><span class="line">    <span class="keyword">Set</span> xlSheet = <span class="literal">Nothing</span>	<span class="comment">'释放sheet</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Command3_Click()</span><br><span class="line">	Text2.<span class="keyword">Text</span> = <span class="string">""</span>	<span class="comment">'赋值为空</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> 关于_Click()</span><br><span class="line">	about.Show	<span class="comment">'显示about</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> 示例_Click()</span><br><span class="line">	简报示例.Show	<span class="comment">'显示简报示例</span></span><br><span class="line">	<span class="keyword">Me</span>.Left = 简报示例.Width	<span class="comment">'将简报窗口置于简报示例窗口右边</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="简报示例-frm"><a href="#简报示例-frm" class="headerlink" title="简报示例.frm"></a>简报示例.frm</h2><p><img src="%5Cimages%5Cpasted-2.png" alt="upload successful"></p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># file: 代码</span></span><br><span class="line"><span class="comment">'使用了工具=&gt;菜单编辑器</span></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Form_Load()</span><br><span class="line">	<span class="keyword">Me</span>.Left = <span class="number">0</span>	<span class="comment">'窗体启动时居屏幕左边</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="文件-frm"><a href="#文件-frm" class="headerlink" title="文件.frm"></a>文件.frm</h2><p><img src="%5Cimages%5Cpasted-3.png" alt="upload successful"></p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># file: 代码</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Command1_Click()</span><br><span class="line">	Unload <span class="keyword">Me</span>	<span class="comment">'关闭文件窗口</span></span><br><span class="line">	Login.Show	<span class="comment">'显示login窗口</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Command2_Click()</span><br><span class="line">	文件预览.Show	<span class="comment">'显示文件预览窗口</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Command3_Click()	<span class="comment">'将日期设置为当前日期</span></span><br><span class="line">	Combo5.<span class="keyword">Text</span> = Year(<span class="built_in">Date</span>)</span><br><span class="line">	Combo6.<span class="keyword">Text</span> = Month(<span class="built_in">Date</span>)</span><br><span class="line">	Combo7.<span class="keyword">Text</span> = Day(<span class="built_in">Date</span>)</span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Command4_Click()	<span class="comment">'赋值为空</span></span><br><span class="line">	Text1.<span class="keyword">Text</span> = <span class="string">""</span></span><br><span class="line">	Text2.<span class="keyword">Text</span> = <span class="string">""</span></span><br><span class="line">	Text3.<span class="keyword">Text</span> = <span class="string">""</span></span><br><span class="line">	Text4.<span class="keyword">Text</span> = <span class="string">""</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Label2_Click()</span><br><span class="line">	信息.Show	<span class="comment">'显示信息窗口</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> 关于_Click()</span><br><span class="line">	about.Show	<span class="comment">'显示about窗口</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> 示例_Click()</span><br><span class="line">	文件示例.Show	<span class="comment">'显示文件示例窗口</span></span><br><span class="line">	<span class="keyword">Me</span>.Left = 文件示例.Width	<span class="comment">'将本窗口放在文件示例窗口右边</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="文件示例-frm"><a href="#文件示例-frm" class="headerlink" title="文件示例.frm"></a>文件示例.frm</h2><p><img src="/blog/img/wenjian/wenjianshili.jpg" alt="alt"></p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># file: 代码</span></span><br><span class="line"><span class="comment">'使用了工具=&gt;菜单编辑器</span></span><br><span class="line">	<span class="keyword">Private</span> <span class="keyword">Sub</span> Form_Load()</span><br><span class="line">	<span class="keyword">Me</span>.Left = <span class="number">0</span>	<span class="comment">'窗体启动时居屏幕左边</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="文件预览-frm"><a href="#文件预览-frm" class="headerlink" title="文件预览.frm"></a>文件预览.frm</h2><p><img src="/blog/img/wenjian/wenjianyulan.jpg" alt="alt"></p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># file: 代码</span></span><br><span class="line"><span class="comment">'以下注释同简报.frm</span></span><br><span class="line"><span class="keyword">Dim</span> xlApp <span class="keyword">As</span> Excel.Application</span><br><span class="line"><span class="keyword">Dim</span> xlBook <span class="keyword">As</span> Excel.Workbook</span><br><span class="line"><span class="keyword">Dim</span> xlSheet <span class="keyword">As</span> Excel.Worksheet</span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Command2_Click()</span><br><span class="line">    Unload <span class="keyword">Me</span></span><br><span class="line">    <span class="keyword">Set</span> xlApp = CreateObject(<span class="string">"excel.application"</span>)</span><br><span class="line">    xlApp.Visible = <span class="literal">False</span></span><br><span class="line">    <span class="keyword">Set</span> xlBook = xlApp.Workbooks.Open(App.Path &amp; <span class="string">"\文件.xls"</span>)</span><br><span class="line">    <span class="keyword">With</span> xlApp.ActiveSheet</span><br><span class="line">        .Range(<span class="string">"ae7"</span>) = 文件.Combo1.<span class="keyword">Text</span></span><br><span class="line">        .Range(<span class="string">"ah7"</span>) = 文件.Combo2.<span class="keyword">Text</span></span><br><span class="line">        .Range(<span class="string">"ab14"</span>) = 文件.Combo3.<span class="keyword">Text</span></span><br><span class="line">        .Range(<span class="string">"aa18"</span>) = 文件.Combo4.<span class="keyword">Text</span></span><br><span class="line">        .Range(<span class="string">"aa22"</span>) = 文件.Combo5.<span class="keyword">Text</span></span><br><span class="line">        .Range(<span class="string">"ad22"</span>) = 文件.Combo6.<span class="keyword">Text</span></span><br><span class="line">        .Range(<span class="string">"ag22"</span>) = 文件.Combo7.<span class="keyword">Text</span></span><br><span class="line">        .Range(<span class="string">"f26"</span>) = 文件.Text2.<span class="keyword">Text</span></span><br><span class="line">        .Range(<span class="string">"z28"</span>) = 文件.Text3.<span class="keyword">Text</span></span><br><span class="line">        .Range(<span class="string">"e40"</span>) = 文件.Text4.<span class="keyword">Text</span></span><br><span class="line">        .Range(<span class="string">"ae51"</span>) = 文件.Text1.<span class="keyword">Text</span></span><br><span class="line">    <span class="keyword">End</span> <span class="keyword">With</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">'xlApp.ActiveSheet.PrintPreview</span></span><br><span class="line">    xlApp.ActiveSheet.PrintOut</span><br><span class="line">    xlApp.DisplayAlerts = <span class="literal">False</span></span><br><span class="line">    xlBook.Close <span class="literal">True</span></span><br><span class="line">    <span class="comment">'xlBook.Close savechanges = False</span></span><br><span class="line">       </span><br><span class="line">    xlApp.Quit</span><br><span class="line">    <span class="comment">'xlApp.DisplayAlerts = False</span></span><br><span class="line">    <span class="keyword">Set</span> xlApp = <span class="literal">Nothing</span></span><br><span class="line">    <span class="keyword">Set</span> xlBook = <span class="literal">Nothing</span></span><br><span class="line">    <span class="keyword">Set</span> xlSheet = <span class="literal">Nothing</span>   </span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="信息-frm"><a href="#信息-frm" class="headerlink" title="信息.frm"></a>信息.frm</h2><p><img src="/blog/img/wenjian/xinxi.jpg" alt="alt"></p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># file: 代码</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">Private</span> <span class="keyword">Sub</span> Command1_Click()</span><br><span class="line">	Unload <span class="keyword">Me</span>	<span class="comment">'关闭当前窗口</span></span><br><span class="line">	文件.Show	<span class="comment">'显示文件窗口</span></span><br><span class="line"><span class="keyword">End</span> <span class="keyword">Sub</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="about-frm"><a href="#about-frm" class="headerlink" title="about.frm"></a>about.frm</h2><p><img src="/blog/img/wenjian/about.jpg" alt="alt"></p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># file: 代码</span></span><br><span class="line"><span class="comment">'使用了工具=&gt;菜单编辑器</span></span><br><span class="line"><span class="comment">'使用vb内置关于窗体</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># file: 工程=&gt;引用</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'Microsoft Excel 11.0 Object Library</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="部件"><a href="#部件" class="headerlink" title="部件"></a>部件</h2><figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># file: 工程=&gt;部件</span></span><br><span class="line"></span><br><span class="line"><span class="comment">'Microsoft Windows Common Controls-2 6.0</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="文件资源管理器"><a href="#文件资源管理器" class="headerlink" title="文件资源管理器"></a>文件资源管理器</h2><p>将文件.xls和简报.xls两个模板文件放在资源管理中，  </p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># file: 外接程序=&gt;外接程序管理器=&gt;VB6资源管理器=&gt;加载/卸载</span></span><br><span class="line"></span><br><span class="line">├──文件资源管理器</span><br><span class="line">│  ├──<span class="keyword">CUSTOM</span></span><br><span class="line">│     ├── <span class="number">102</span>				<span class="comment">'文件稿纸的模板excel文件</span></span><br><span class="line">└     └── <span class="number">103</span>				<span class="comment">'简报的模板excel文件</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="打包发布"><a href="#打包发布" class="headerlink" title="打包发布"></a>打包发布</h2><ul>
+<li>1.VB6==生成exe文件；</li>
+<li>2.Package&amp;Deployment向导==发布；</li>
+<li>3.setup factor==打包，将”Package &amp; Deployment 向导”生成的dll等文件加入，设置exe文件快捷方式。构建发布。</li>
+</ul>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
+<li>对于部分部件的list手工录入，没有数据库予以管理。  </li>
+<li>因为包含了一些内部人员信息，所以加入了登陆窗口，同时不提供软件下载。</li>
+</ul>
+
+            </div>
+        
+        <footer class="article-footer">
+        </footer>
+    </div>
+</article>
+
+
+    
+<nav id="article-nav">
+    
+        <a href="/wiki/index/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Newer</strong>
+            <div class="article-nav-title">
+                
+                    Hello World
+                
+            </div>
+        </a>
+    
+    
+</nav>
+
+
+
+
+
+    
+    
+
+
+
+
+<!-- baidu url auto push script -->
+<script type="text/javascript">
+    !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=window.location.href,o=document.referrer;if(!e.test(r)){var n="//api.share.baidu.com/s.gif";o?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var t=new Image;t.src=n}}(window);
+</script>     
+</section>
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            John Doe &copy; 2019 
+            <a rel="external nofollow noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/80x15.png"></a>
+            <br> Powered by <a href="http://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>. Theme - <a href="https://github.com/zthxxx/hexo-theme-Wikitten" rel="external nofollow noopener noreferrer" target="_blank">wikitten</a>
+            
+                <br>
+                <span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+                &nbsp;|&nbsp;
+                <span id="busuanzi_container_site_pv"><i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+            
+        </div>
+    </div>
+</footer>
+
+        
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+        <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true,
+            TeX: {
+                equationNumbers: {
+                  autoNumber: 'AMS'
+                }
+            }
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
